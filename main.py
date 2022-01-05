@@ -2,7 +2,7 @@ import requests
 from pyrogram import idle
 from pyrogram import Client as Bot
 
-from config import API_ID, API_HASH, BOT_TOKEN, BG_IMAGE
+from config import API_ID, API_HASH, BOT_TOKEN
 
 
 
