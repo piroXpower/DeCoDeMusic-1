@@ -13,9 +13,6 @@ from helper.decorators import authorized_users_only
 def ban(bot, message):
     await bot.kick_chat_member(message.chat.id, message.reply_to_message.from_user.id)
     await bot.send_message(message.chat.id, f"{message.reply_to_message.from_user.mention} Banned Successfully")
-try:
-   except Exception as exc:
-    await message.reply_to_message.reply(f"{exc}")
    
 # unban_chat_member
 @bot.on_message(filters.command("unban") & filters.group)
@@ -23,7 +20,3 @@ try:
 def unban(bot, message):
     await bot.unban_chat_member(message.chat.id, message.reply_to_message.from_user.id)
     await bot.send_message(message.chat.id, f"{message.reply_to_message.from_user.mention} Unban Successfully")
-try:
-   except Exception as exc:
-    await message.reply_to_message.reply(f"{exc}")
-
