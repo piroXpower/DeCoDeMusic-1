@@ -11,12 +11,12 @@ from helper.decorators import authorized_users_only
 @bot.on_message(filters.command("ban") & filters.group)
 @authorized_users_only
 def ban(bot, message):
-    await bot.kick_chat_member(message.chat.id, message.reply_to_message.from_user.id)
-    await bot.send_message(message.chat.id, f"{message.reply_to_message.from_user.mention} Banned Successfully")
+    bot.kick_chat_member(message.chat.id, message.reply_to_message.from_user.id)
+    bot.send_message(message.chat.id, f"{message.reply_to_message.from_user.mention} Banned Successfully")
    
 # unban_chat_member
 @bot.on_message(filters.command("unban") & filters.group)
 @authorized_users_only
 def unban(bot, message):
-    await bot.unban_chat_member(message.chat.id, message.reply_to_message.from_user.id)
-    await bot.send_message(message.chat.id, f"{message.reply_to_message.from_user.mention} Unban Successfully")
+    bot.unban_chat_member(message.chat.id, message.reply_to_message.from_user.id)
+    bot.send_message(message.chat.id, f"{message.reply_to_message.from_user.mention} Unban Successfully")
