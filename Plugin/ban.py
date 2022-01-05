@@ -4,7 +4,7 @@ from pyrogram import Client as bot
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import *
-from helper.decorators import authorized_users_only
+from helpers.decorators import authorized_users_only
 # kick_chat_member
 
 
